@@ -1,16 +1,45 @@
-# React + Vite
+# erikaespecialista.com
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site de posicionamento de marca pessoal de **Érika Santos**, especialista em administração e gestão pública. Combina landing page institucional com CMS proprietário para artigos e galeria de fotos.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Frontend:** React 19 + Vite + TailwindCSS v4
+- **Roteamento:** React Router v7
+- **Backend (em desenvolvimento):** Supabase (Postgres + Auth + Storage)
+- **Hospedagem:** Vercel
 
-## React Compiler
+## Estrutura de páginas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Rota | Descrição |
+|---|---|
+| `/` | Home — hero, sobre, timeline, artigos recentes, galeria recente, contato |
+| `/artigos` | Mural de artigos com filtro por categoria e busca |
+| `/artigos/:slug` | Artigo completo com compartilhamento e artigos relacionados |
+| `/galeria` | Galeria de fotos com lightbox e navegação por teclado |
+| `/admin/*` | Painel administrativo (em desenvolvimento) |
 
-## Expanding the ESLint configuration
+## Desenvolvimento
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+```
+
+## Assets de marca
+
+Logos e ícones em `public/assets/`:
+
+| Arquivo | Uso |
+|---|---|
+| `logo-navy.png` | Header (fundo claro) |
+| `logo-gold.png` | Footer (fundo navy) |
+| `favicon-32.png` / `favicon-16.png` | Favicon |
+| `apple-touch-icon.png` | iOS home screen |
+| `icon-512.png` | Master icon |
