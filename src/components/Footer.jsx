@@ -1,0 +1,58 @@
+import { Link } from 'react-router-dom'
+import Logo from './Logo.jsx'
+
+function FootLink({ to, children }) {
+  return (
+    <Link to={to} className="transition-colors hover:text-gold">
+      {children}
+    </Link>
+  )
+}
+
+export default function Footer() {
+  return (
+    <footer className="bg-navy-900 text-white">
+      <div className="mx-auto max-w-[1140px] px-10 pt-[54px]">
+        <div className="flex flex-wrap items-start justify-between gap-8 pb-10">
+          <div className="max-w-[38ch]">
+            <div className="mb-[14px] flex items-center gap-[11px]">
+              <Logo tone="gold" />
+              <span className="font-serif text-lg font-semibold text-white">
+                Érika Santos
+              </span>
+            </div>
+            <p className="m-0 text-sm leading-[1.6] text-slate-soft">
+              Especialista em administração e gestão pública. Liderança técnica,
+              transparência e resultados.
+            </p>
+          </div>
+          <div className="flex gap-14">
+            <div>
+              <div className="mb-[14px] text-xs uppercase tracking-[0.12em] text-slate-soft-3">
+                Navegar
+              </div>
+              <div className="flex flex-col gap-[9px] text-sm text-slate-soft-2">
+                <FootLink to="/#sobre">Sobre</FootLink>
+                <FootLink to="/artigos">Artigos</FootLink>
+                <FootLink to="/galeria">Fotos</FootLink>
+              </div>
+            </div>
+            <div>
+              <div className="mb-[14px] text-xs uppercase tracking-[0.12em] text-slate-soft-3">
+                Conectar
+              </div>
+              <div className="flex flex-col gap-[9px] text-sm text-slate-soft-2">
+                <FootLink to="/#contato">LinkedIn</FootLink>
+                <FootLink to="/#contato">E-mail</FootLink>
+                <FootLink to="/admin/login">Área restrita</FootLink>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="border-t border-navy-line py-[18px] pb-7 text-[13px] text-slate-soft-3">
+          © 2026 Érika Santos · Todos os direitos reservados
+        </div>
+      </div>
+    </footer>
+  )
+}
