@@ -4,6 +4,7 @@ import Header from '../components/Header.jsx'
 import Footer from '../components/Footer.jsx'
 import ArticleCard from '../components/ArticleCard.jsx'
 import Placeholder from '../components/Placeholder.jsx'
+import HeroPortrait from '../components/HeroPortrait.jsx'
 import { getRecentArticles } from '../data/articles.js'
 import { getRecentPhotos } from '../data/photos.js'
 
@@ -126,12 +127,7 @@ export default function Home() {
           </div>
         </div>
         <div className="relative">
-          <Placeholder
-            tone="portrait"
-            label="retrato profissional"
-            className="aspect-[4/5] overflow-hidden rounded-lg border border-line-2"
-            labelClass="text-[#8a93a4] text-[12px]"
-          />
+          <HeroPortrait />
           <div className="absolute bottom-8 left-[-24px] rounded-lg bg-navy-800 px-6 py-5 shadow-[0_18px_40px_rgba(17,32,58,0.22)]">
             <div className="font-serif text-[30px] font-semibold leading-none text-white">
               2014<span className="text-gold">—</span>2024
