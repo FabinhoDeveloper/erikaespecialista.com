@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import Logo from './Logo.jsx'
 
 function FootLink({ to, children }) {
   return (
@@ -15,11 +14,12 @@ export default function Footer() {
       <div className="mx-auto max-w-[1140px] px-10 pt-[54px]">
         <div className="flex flex-wrap items-start justify-between gap-8 pb-10">
           <div className="max-w-[38ch]">
-            <div className="mb-[14px] flex items-center gap-[11px]">
-              <Logo tone="gold" />
-              <span className="font-serif text-lg font-semibold text-white">
-                Érika Santos
-              </span>
+            <div className="mb-[14px]">
+              <img
+                src="/assets/logo-gold.png"
+                alt="Érika Santos"
+                className="block h-[46px] w-auto"
+              />
             </div>
             <p className="m-0 text-sm leading-[1.6] text-slate-soft">
               Especialista em administração e gestão pública. Liderança técnica,

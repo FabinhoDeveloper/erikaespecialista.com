@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import Logo from './Logo.jsx'
 
 // Header fixo no topo, com blur. Os links de navegação apontam para seções da
 // Home (#sobre, #artigos, #fotos); as páginas completas de Artigos e Fotos são
@@ -10,11 +9,12 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-cream/[0.86] backdrop-blur-md">
       <div className="mx-auto flex max-w-[1140px] items-center justify-between px-10 py-4">
-        <Link to="/" className="flex items-center gap-[11px]">
-          <Logo tone="navy" />
-          <span className="font-serif text-[17px] font-semibold tracking-[0.2px]">
-            Érika Santos
-          </span>
+        <Link to="/" className="flex items-center">
+          <img
+            src="/assets/logo-navy.png"
+            alt="Érika Santos"
+            className="block h-[44px] w-auto"
+          />
         </Link>
         <nav className="flex items-center gap-8">
           <Link to="/#sobre" className={link}>
