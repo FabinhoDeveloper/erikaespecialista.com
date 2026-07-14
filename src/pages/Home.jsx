@@ -2,14 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Header from '../components/Header.jsx'
 import Footer from '../components/Footer.jsx'
-import ArticleCard from '../components/ArticleCard.jsx'
-import Placeholder from '../components/Placeholder.jsx'
 import HeroPortrait from '../components/HeroPortrait.jsx'
-import { getRecentArticles } from '../data/articles.js'
-import { getRecentPhotos } from '../data/photos.js'
-
-const recentArticles = getRecentArticles(3)
-const recentPhotos = getRecentPhotos(3)
 
 function EyebrowLine({ children }) {
   return (
@@ -113,12 +106,6 @@ export default function Home() {
           </p>
           <div className="flex flex-wrap gap-[14px]">
             <Link
-              to="/artigos"
-              className="rounded-[5px] bg-navy px-7 py-[14px] text-base font-semibold text-white transition-colors hover:bg-navy-700"
-            >
-              Ler os artigos
-            </Link>
-            <Link
               to="/#sobre"
               className="rounded-[5px] border-[1.5px] border-navy px-[26px] py-[12.5px] text-base font-semibold text-navy transition-colors hover:bg-navy hover:text-white"
             >
@@ -172,12 +159,6 @@ export default function Home() {
             à coordenação de governo, sempre com foco na continuidade de políticas públicas
             além dos ciclos eleitorais.
           </p>
-          <Link
-            to="/artigos"
-            className="border-b-2 border-gold pb-[2px] text-base font-semibold text-navy"
-          >
-            Ler artigos e opiniões →
-          </Link>
         </div>
         <div className="flex flex-col gap-[34px] border-l-2 border-line pl-9">
           <TimelineItem period="2025 — ATUAL" title="Gerente de Governo">
@@ -202,68 +183,6 @@ export default function Home() {
             Mais de 20 anos de experiência acumulada no setor público, com especialização
             técnica em finanças e administração.
           </TimelineItem>
-        </div>
-      </section>
-
-      {/* ARTIGOS RECENTES */}
-      <section id="artigos" className="scroll-mt-16 border-y border-line bg-white">
-        <div className="mx-auto max-w-[1140px] px-10 py-20">
-          <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <div className="mb-[14px] font-mono text-[13px] uppercase tracking-[0.12em] text-gold-text">
-                Artigos Recentes
-              </div>
-              <h2 className="m-0 font-serif text-[36px] font-semibold leading-[1.1]">
-                Análises e opiniões
-              </h2>
-            </div>
-            <Link
-              to="/artigos"
-              className="rounded-[5px] border-[1.5px] border-navy px-[22px] py-[11px] text-[15px] font-semibold text-navy transition-colors hover:bg-navy hover:text-white"
-            >
-              Ver todos os artigos →
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 gap-[26px] md:grid-cols-3">
-            {recentArticles.map((a) => (
-              <ArticleCard key={a.slug} article={a} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FOTOS RECENTES */}
-      <section id="fotos" className="mx-auto max-w-[1140px] scroll-mt-16 px-10 py-20">
-        <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <div className="mb-[14px] font-mono text-[13px] uppercase tracking-[0.12em] text-gold-text">
-              Registros & Eventos
-            </div>
-            <h2 className="m-0 font-serif text-[36px] font-semibold leading-[1.1]">
-              Fotos recentes
-            </h2>
-          </div>
-          <Link
-            to="/galeria"
-            className="rounded-[5px] border-[1.5px] border-navy px-[22px] py-[11px] text-[15px] font-semibold text-navy transition-colors hover:bg-navy hover:text-white"
-          >
-            Ver todas as fotos →
-          </Link>
-        </div>
-        <div className="grid grid-cols-1 gap-[26px] md:grid-cols-3">
-          {recentPhotos.map((p) => (
-            <Link
-              key={p.title}
-              to="/galeria"
-              className="relative block aspect-[4/3] overflow-hidden rounded-lg"
-            >
-              <Placeholder tone={p.tone} label="foto de evento" className="absolute inset-0" />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[rgba(17,32,58,0.92)] to-transparent p-4 text-white">
-                <div className="font-serif text-base font-semibold">{p.title}</div>
-                <div className="mt-[2px] text-[13px] text-slate-soft-2">{p.place}</div>
-              </div>
-            </Link>
-          ))}
         </div>
       </section>
 

@@ -33,8 +33,6 @@ export default function Footer() {
               </div>
               <div className="flex flex-col gap-[9px] text-sm text-slate-soft-2">
                 <FootLink to="/#sobre">Sobre</FootLink>
-                <FootLink to="/artigos">Artigos</FootLink>
-                <FootLink to="/galeria">Fotos</FootLink>
               </div>
             </div>
             <div>

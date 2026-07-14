@@ -1,9 +1,6 @@
 import { useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import Home from './pages/Home.jsx'
-import Artigos from './pages/Artigos.jsx'
-import Artigo from './pages/Artigo.jsx'
-import Galeria from './pages/Galeria.jsx'
 
 // Gerencia o scroll nas trocas de rota: se houver âncora (#sobre, #artigos…),
 // rola suavemente até a seção correspondente; caso contrário, volta ao topo.
@@ -36,9 +33,6 @@ export default function App() {
       <ScrollManager />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/artigos" element={<Artigos />} />
-        <Route path="/artigos/:slug" element={<Artigo />} />
-        <Route path="/galeria" element={<Galeria />} />
       </Routes>
     </>
   )

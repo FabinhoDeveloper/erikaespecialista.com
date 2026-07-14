@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom'
 
-// Header fixo no topo, com blur. Os links de navegação apontam para seções da
-// Home (#sobre, #artigos, #fotos); as páginas completas de Artigos e Fotos são
-// acessadas pelos botões "Ver todos os artigos" / "Ver todas as fotos".
+// Header fixo no topo, com blur. Os links de navegação apontam para seções da Home (#sobre, #contato).
 export default function Header() {
   const link = 'text-[15px] text-muted transition-colors hover:text-navy'
 
@@ -19,12 +17,6 @@ export default function Header() {
         <nav className="flex items-center gap-8">
           <Link to="/#sobre" className={link}>
             Sobre
-          </Link>
-          <Link to="/#artigos" className={link}>
-            Artigos
-          </Link>
-          <Link to="/#fotos" className={link}>
-            Fotos
           </Link>
           <Link
             to="/#contato"
